@@ -9,6 +9,7 @@
     "dist"
   ],
   "scripts": {
+    "release": "npm run build && npm publish --access public && git push && git push --tags && gh release create $(node -p \"require('./package.json').version\") --title \"v$(node -p \"require('./package.json').version\")\" --notes \"Release v$(node -p \"require('./package.json').version\")\" ",
     "build": "tsup src/index.ts --format cjs,esm --dts --external react",
     "dev": "tsup src/index.ts --format cjs,esm --dts --external react --watch",
     "lint": "eslint src --ext .ts,.tsx",
