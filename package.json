@@ -1,7 +1,7 @@
 {
   "name": "reuse-my-component",
   "version": "1.0.6",
-  "description": "A React TypeScript component library",
+  "description": "A React TypeScript component library.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
