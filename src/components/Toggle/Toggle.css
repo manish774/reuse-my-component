@@ -1,0 +1,39 @@
+/* src/components/Toggle/Toggle.css */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.toggle--disabled { opacity: 0.4; cursor: not-allowed; }
+
+.toggle__track {
+  position: relative;
+  width: 34px;
+  height: 18px;
+  border-radius: 9px;
+  background: #d1d5db;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  outline: none;
+}
+.toggle__track:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.15);
+}
+.toggle__track--on { background: #111; }
+
+.toggle__knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.18s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.toggle__track--on .toggle__knob { transform: translateX(16px); }
+
+.toggle__label { font-size: 13px; color: #555; }
